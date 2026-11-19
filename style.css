@@ -1,0 +1,27 @@
+@font-face{font-family:"Barlow Condensed";font-weight:600;font-display:swap;src:url(/fonts/barlow-condensed-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:400;font-display:swap;src:url(/fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:600;font-display:swap;src:url(/fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2")}
+:root{--ink:#0C0C11;--paper:#F4F2F6;--pink:#FF5FA2;--grey:rgb(168,168,177);--line:rgba(244,242,246,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink)}
+body{min-height:100vh;color:var(--paper);font:400 16px/1.4 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center;padding:28px 18px 40px;position:relative;overflow-x:hidden}
+.bg{position:fixed;inset:-40px;background:center/cover no-repeat var(--cover);filter:blur(40px) saturate(1.1);opacity:.28;z-index:0}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(12,12,17,.35),var(--ink) 75%)}
+main{position:relative;z-index:1;width:100%;max-width:420px}
+.logo{display:block;text-align:center;font:600 22px/1 "Barlow Condensed",sans-serif;letter-spacing:.12em;color:var(--paper);text-decoration:none;margin-bottom:22px}
+.logo:hover{color:var(--pink)}
+.cover{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;box-shadow:0 12px 40px rgba(0,0,0,.55);background:#1a1a22}
+h1{font:600 34px/1.05 "Barlow Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin:20px 0 4px}
+.by{text-align:center;color:var(--grey);font-size:15px;margin-bottom:20px}
+ul{list-style:none;border-top:1px solid var(--line)}
+li{border-bottom:1px solid var(--line)}
+li a{display:flex;align-items:center;gap:12px;padding:14px 4px;color:var(--paper);text-decoration:none;min-height:56px}
+.ic{flex:none;width:22px;height:22px;color:var(--paper);opacity:.9}
+.svc{flex:1;font-weight:600;font-size:17px}
+li a:hover .svc,li a:focus-visible .svc,li a:hover .ic{color:var(--pink)}
+.act{flex:none;font:600 14px/1 "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--pink);color:var(--pink);border-radius:999px;padding:8px 16px}
+li a:hover .act,li a:focus-visible .act{background:var(--pink);color:var(--ink)}
+li.main .act{background:var(--pink);color:var(--ink)}
+.more{margin-top:26px;text-align:center;font-size:14px;color:var(--grey)}
+.more a{color:var(--paper);text-underline-offset:3px;text-decoration-color:rgba(244,242,246,.35)}
+.more a:hover{color:var(--pink)}
